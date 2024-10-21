@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            console.log("Datos recibidos:", data); // Añadir este log para ver los datos
+            console.log("Datos recibidos:", data); 
             const alumnesTableBody = document.querySelector("#tablaAlumne tbody");
-            alumnesTableBody.innerHTML = ""; // Limpiar la tabla antes de agregar
+            alumnesTableBody.innerHTML = "";
 
-            // Iterar sobre los alumnos y agregarlos al DOM
+            
             data.forEach(alumne => {
                 const row = document.createElement("tr");
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 row.appendChild(idAulaCell);
 
                 const nomCell = document.createElement("td");
-                nomCell.textContent = alumne.NomAlumne; // Asegúrate de que esto sea correcto
+                nomCell.textContent = alumne.NomAlumne; 
                 row.appendChild(nomCell);
 
                 const cicleCell = document.createElement("td");
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 row.appendChild(cursCell);
 
                 const grupCell = document.createElement("td");
-                grupCell.textContent = alumne.Grup; // Asegúrate de que esto sea correcto
+                grupCell.textContent = alumne.Grup; 
                 row.appendChild(grupCell);
 
                 alumnesTableBody.appendChild(row);
